@@ -9,6 +9,7 @@ image/data/
 image/cache/
 system/cache/
 system/logs/
+/catalog/view/boat_data
 
 system/storage/
 

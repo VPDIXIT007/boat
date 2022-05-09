@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+	<html
+	dir="{{ direction }}" lang="{{ lang }}"> <!--<![endif]-->
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{{ title }}</title>
+		<base href="{{ base }}"/>
+		{% if description %}
+			<meta name="description" content="{{ description }}"/>
+		{% endif %}
+		{% if keywords %}
+			<meta name="keywords" content="{{ keywords }}"/>
+		{% endif %}
+		{# <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script> #}
+		<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+		<link
+		href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css"/>
+		{# <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet"> #}
+		{% for style in styles %}
+			<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}"/>
+		{% endfor %}
+		{% for script in scripts %}
+			<script src="{{ script }}" type="text/javascript"></script>
+		{% endfor %}
+		<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+		{% for link in links %}
+			<link href="{{ link.href }}" rel="{{ link.rel }}"/>
+		{% endfor %}
+		{% for analytic in analytics %}
+			{{ analytic }}
+		{% endfor %}
+
+		{# <script src="catalog/view/boat_data/ck/ckeditor.js"></script>
+																		<script src="catalog/view/boat_data/ck/sample.js"></script> #}
+		{# <script type="text/javascript" src="catalog/view/boat_data/js/calendar.js"></script> #}
+
+		<link rel="stylesheet" href="catalog/view/boat_data/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+		<link href='fonts/soap-icons.ttf' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="screen and (min-width: 900px)" href="catalog/view/boat_data/css/widescreen.css">
+		<link rel="stylesheet" media="screen and (max-width: 768px)" href="catalog/view/boat_data/css/smallscreen.css">
+
+		<link
+		rel="shortcut icon" href="catalog/view/boat_data/photo/logo.png" type="image/x-icon">
+		<!-- Latest compiled and minified CSS -->
+		<link
+		rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Theme Styles -->
+		<link rel="stylesheet" href="catalog/view/boat_data/css/bootstrap.min.css">
+		<link rel="stylesheet" href="catalog/view/boat_data/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link
+		rel="stylesheet" href="catalog/view/boat_data/css/animate.min.css">
+
+		<!-- Current Page Styles -->
+		<link rel="stylesheet" type="text/css" href="catalog/view/boat_data/components/revolution_slider/css/settings.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="catalog/view/boat_data/components/revolution_slider/css/style.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="catalog/view/boat_data/components/jquery.bxslider/jquery.bxslider.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="catalog/view/boat_data/components/flexslider/flexslider.css" media="screen"/>
+		<link href="catalog/view/boat_data/css/style.css" id="main-style" rel="stylesheet">
+
+
+		<!-- Updated Styles -->
+		<link
+		rel="stylesheet" href="catalog/view/boat_data/css/updates.css"> <!-- Custom Styles -->
+		<link
+		rel="stylesheet" href="catalog/view/boat_data/css/custom.css">
+
+		<!-- Responsive Styles -->
+		<link rel="stylesheet" href="catalog/view/boat_data/css/responsive.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+        .txt-init{
+            text-transform: initial;
+        }
+        .bg-skyblue {
+         background: #072129 !important;
+         border:4px solid skyblue;
+        }
+        .categ_active {
+            border: 1px solid #007bff !important;
+        }
+        .checkbox-emp{
+            position: absolute;
+            top: 12px;
+            left: 22px;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+        }
+        .checkbox-show{
+            display: block;
+            background-image: url('image/checks.png');
+            background-size: 24px 24px;
+            border: 0px;
+        }
+        .position-r{
+            position: relative;
+        }
+        .radio_size{
+            height: 25px;
+            width: 25px;
+            margin: 0px !important;
+        }
+        .logo_center{
+            display: flex;
+            justify-content: center;
+        }
+        ._main_categ{
+            margin: 20px;
+        }
+        .categ_label{
+            margin-top: 0px !important;
+        }
+		.d-none{
+			display: none;
+		}
+    </style>
+	</head>
+	<body>
+		{# <li class="dropdown">
+			<a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown">
+				<i class="fa fa-user"></i>
+				<span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span>
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-right">
+				{% if logged %}
+					<li>
+						<a href="{{ account }}">{{ text_account }}</a>
+					</li>
+					<li>
+						<a href="{{ order }}">{{ text_order }}</a>
+					</li>
+					<li>
+						<a href="{{ transaction }}">{{ text_transaction }}</a>
+					</li>
+					<li>
+						<a href="{{ download }}">{{ text_download }}</a>
+					</li>
+					<li>
+						<a href="{{ logout }}">{{ text_logout }}</a>
+					</li>
+				{% else %}
+					<li>
+						<a href="{{ register }}">{{ text_register }}</a>
+					</li>
+					<li>
+						<a href="{{ login }}">{{ text_login }}</a>
+					</li>
+				{% endif %}
+			</ul>
+		</li> #}

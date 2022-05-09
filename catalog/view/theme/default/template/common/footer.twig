@@ -1,0 +1,210 @@
+{# <footer>
+  <div class="container">
+    <div class="row">
+      {% if informations %}
+      <div class="col-sm-3">
+        <h5>{{ text_information }}</h5>
+        <ul class="list-unstyled">
+         {% for information in informations %}
+          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <div class="col-sm-3">
+        <h5>{{ text_service }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+          <li><a href="{{ return }}">{{ text_return }}</a></li>
+          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>{{ text_extra }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+          <li><a href="{{ special }}">{{ text_special }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>{{ text_account }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p>{{ powered }}</p>
+  </div>
+</footer> #}
+
+<footer id="footer" style="background: #a5e0f63b;">
+	<div class="footer-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<h2>
+						Popular Destinations
+					</h2>
+					<ul class="discover triangle hover row">
+						<li class="col-xs-6">
+							<a href="#">Miami</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">Lake Lanier</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">Lake Tahoe</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">San Diego</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">Lake Travis</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">Newport Beach</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">Chicago</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">Lake Norman</a>
+						</li>
+
+						<li class="col-xs-6">
+							<a href="#">Lake Travis</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">Lake Destin</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">
+								Vancouver
+							</a>
+						</li>
+
+						<li class="col-xs-6">
+							<a href="#">
+								Bahamas Yacht
+							</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">
+								Dubai Yacht
+							</a>
+						</li>
+						<li class="col-xs-6">
+							<a href="#">
+								Paris Boat
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h2>
+						Quick Links
+					</h2>
+
+					<img src="catalog/view/boat_data/photo/qqq - Copy.png" style=" width: 75%;margin-bottom: 20px;">
+					<br>
+					<img src="catalog/view/boat_data/photo/qqq.png" style=" width: 75%;">
+
+
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h2 style="color: black;">
+						Subscribe our newsletter
+					</h2>
+					<p style="color: black;">Sign up for our mailing list to get latest updates and offers.</p>
+					<br/>
+					<div class="icon-check">
+						<input type="text" class="input-text full-width notional169" placeholder="your email">
+					</div>
+					<br/>
+					<span style="color: black;">We respect your privacy</span>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<h2>About Find Boat</h2>
+					<p style="
+																												    color: black;
+																												">
+						FIND BOAT is the world’s largest boat rental & water experience marketplace. We have over 50,000 listings in 164 countries covering 8,300 destinations.
+					</p>
+					<br/>
+					<address class="contact-details">
+						<span class="contact-phone">
+							<i class="soap-icon-phone"></i>
+							+1 999 999 9999</span>
+						<br/>
+
+						<a href="#" class="contact-email">
+							info@myriverboats.com
+						</a>
+					</address>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="
+												    background: #f5f5f5;
+												">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-6">
+					<p style="margin-bottom: 0px;text-align: left;padding: 15px;">&copy; 2022 FIND BOAT ALL RIGHT RESERVED
+					</p>
+				</div>
+
+				<div class="col-md-6">
+					<p style="margin-bottom: 0px;text-align: right;padding: 15px;">
+						<a href="cancellation-policy.php" class="tech1">
+							Cancellation policy
+						</a>
+						<a href="privacy-policy.php" class="tech1">
+							Privacy Policy
+						</a>
+						<a href="terms-conditions.php" class="tech1">
+							Terms & Conditions
+						</a>
+					</p>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</footer></div>{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}"/>{% endfor %}{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>{% endfor %}<!-- Javascript --><script type="text/javascript" src="catalog/view/boat_data/js/jquery-1.11.1.min.js"></script><script type="text/javascript" src="catalog/view/boat_data/js/jquery.noconflict.js"></script><script type="text/javascript" src="catalog/view/boat_data/js/modernizr.2.7.1.min.js"></script><script type="text/javascript" src="catalog/view/boat_data/js/jquery-migrate-1.2.1.min.js"></script><script type="text/javascript" src="catalog/view/boat_data/js/jquery.placeholder.js"></script><script type="text/javascript" src="catalog/view/boat_data/js/jquery-ui.1.10.4.min.js"></script><!-- Twitter Bootstrap --><script type="text/javascript" src="catalog/view/boat_data/js/bootstrap.js"></script><!-- load revolution slider scripts --><script type="text/javascript" src="catalog/view/boat_data/components/revolution_slider/js/jquery.themepunch.tools.min.js"></script><script type="text/javascript" src="catalog/view/boat_data/components/revolution_slider/js/jquery.themepunch.revolution.min.js"></script><!-- load BXSlider scripts --><script type="text/javascript" src="catalog/view/boat_data/components/jquery.bxslider/jquery.bxslider.min.js"></script><!--ck editior js --><script>
+initSample();</script><!-- Google Map Api --><!-- parallax --><script type="text/javascript" src="catalog/view/boat_data/js/jquery.stellar.min.js"></script><!-- waypoint --><script type="text/javascript" src="catalog/view/boat_data/js/waypoints.min.js"></script><!-- load page Javascript --><script type="text/javascript" src="catalog/view/boat_data/js/theme-scripts.js"></script><script type="text/javascript" src="catalog/view/boat_data/js/scripts.js"></script><script type="text/javascript" src="catalog/view/boat_data/components/flexslider/jquery.flexslider-min.js"></script><script type="text/javascript">
+
+
+$(document).ready(function () {
+$("#price-range").slider({
+range: true,
+min: 0,
+max: 1000,
+values: [
+100, 800
+],
+slide: function (event, ui) {
+$(".min-price-label").html("$" + ui.values[0]);
+$(".max-price-label").html("$" + ui.values[1]);
+}
+});
+$(".min-price-label").html("$" + $("#price-range").slider("values", 0));
+$(".max-price-label").html("$" + $("#price-range").slider("values", 1));
+});</script><!--
+				OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+				Please donate via PayPal to donate@opencart.com
+				//--></body></html>
